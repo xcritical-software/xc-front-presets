@@ -1,6 +1,6 @@
 {
   "name": "@xcritical/eslint-plugin-xc-front-lint",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -50,7 +50,7 @@
     "prettier": ">= 1.16.4"
   },
   "devDependencies": {
-    "@xcritical/xc-front-libs-utils": "latest",
+    "@xcritical/xc-front-libs-utils": "^1.0.0",
     "rimraf": "^2.6.2"
   },
   "dependencies": {

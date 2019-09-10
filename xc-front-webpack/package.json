@@ -1,6 +1,6 @@
 {
   "name": "@xcritical/xc-front-webpack",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -36,14 +36,14 @@
   "private": false,
   "devDependencies": {
     "@babel/cli": "^7.2.3",
-    "@xcritical/eslint-plugin-xc-front-lint": "latest",
+    "@xcritical/eslint-plugin-xc-front-lint": "^1.0.0",
     "eslint-teamcity": "^2.1.0",
     "rimraf": "^2.6.3"
   },
   "dependencies": {
     "@storybook/addon-storysource": "^5.1.11",
-    "@xcritical/xc-front-babel": "latest",
-    "@xcritical/xc-front-libs-utils": "latest",
+    "@xcritical/xc-front-babel": "^1.0.0",
+    "@xcritical/xc-front-libs-utils": "^1.0.0",
     "autoprefixer": "^9.5.0",
     "babel-loader": "^8.0.5",
     "chalk": "^2.4.2",
