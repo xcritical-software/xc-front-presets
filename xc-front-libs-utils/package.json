@@ -22,7 +22,7 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/xcritical/xc-front-kit#readme",
   "publishConfig": {
-    "registry": "http://docker.hub:8030/npm/npm/"
+    "access": "public"
   },
   "private": false,
   "devDependencies": {
