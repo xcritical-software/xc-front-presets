@@ -27,6 +27,6 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@xcritical/mono-ci": "^0.0.4"
+    "@xcritical/mono-ci": "0.0.5"
   }
 }

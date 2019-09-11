@@ -1,6 +1,6 @@
 {
   "name": "@xcritical/xc-front-babel",
-  "version": "1.1.0-beta-00018",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/xcritical/xc-front-presets/src/develop/xc-front-babel#readme",
   "publishConfig": {
-    "registry": "http://docker.hub:8030/npm/npm/"
+    "access": "public"
   },
   "eslint-teamcity": {
     "reporter": "inspections",

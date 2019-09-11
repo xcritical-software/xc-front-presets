@@ -1,6 +1,6 @@
 {
   "name": "@xcritical/xc-front-libs-utils",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "lint:teamcity": "exit 0",
@@ -22,7 +22,7 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/xcritical/xc-front-kit#readme",
   "publishConfig": {
-    "registry": "http://docker.hub:8030/npm/npm/"
+    "access": "public"
   },
   "private": false,
   "devDependencies": {
@@ -32,7 +32,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "@xcritical/xc-front-babel": "latest",
+    "@xcritical/xc-front-babel": "^1.0.0",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-clone": "^2.0.1",
