@@ -1,5 +1,5 @@
 git:
-  depth: 1
+  depth: false
 sudo: required
 language: node_js
 node_js:
@@ -11,16 +11,29 @@ cache:
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.17.3
   - export PATH="$HOME/.yarn/bin:$PATH"
-install: yarn install --no-progress
-script:
-  - yarn lint
-  - yarn build
-before_deploy:
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
-deploy:
-  provider: script
-  script: "yarn deploy"
-  skip_cleanup: true
-  on:
-    branch: master
-    tags: true
+install: yarn install --no-progress --frozen-lockfile
+stages:
+  - lint
+  - name: next-version
+    if: branch = master AND type = push AND commit_message !~ /(release)/
+jobs:
+  include:
+    - stage: lint
+      script: yarn lint && yarn test
+    - stage: next-version
+      script: skip
+      if: branch = master AND type = push AND commit_message !~ /(release)/
+      before_deploy:
+        - git config --local user.name "TravisCI"
+        - git config --local user.email "frontend@xcritical.software"        
+        - git remote set-url origin https://${GH_TOKEN}@github.com/xcritical-software/xc-front-presets-test.git > /dev/null 2>&1
+        - git fetch --tags --force
+        - yarn boltify version --message "chore(release):" --no-push
+      after_deploy:
+        - git push --follow-tags --no-verify origin master
+      deploy:
+        provider: script
+        script: yarn build:lastcommit && yarn deploy
+        skip_cleanup: true
+        on:
+          branch: master
