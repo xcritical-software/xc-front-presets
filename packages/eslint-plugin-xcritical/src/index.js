@@ -1,6 +1,6 @@
 /**
  * @fileoverview xc-front-lint
- * @author 123Software
+ * @author XCritical Software
  */
 
 module.exports = {

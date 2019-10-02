@@ -1,5 +1,5 @@
 {
-  "name": "@xcritical/xc-front-webpack",
+  "name": "@xcritical/webpack-conf",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,34 +16,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/xcritical/xc-front-webpack.git"
+    "url": "git+https://github.com/xcritical-software/xc-front-presets.git"
   },
   "keywords": [
     "library"
   ],
-  "author": "123Software",
+  "author": "XCritical Software",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/xcritical/xc-front-kit/xc-front-webpack#readme",
+  "homepage": "https://github.com/xcritical-software/xc-front-presets/src/develop/packages/webpack-conf/#readme",
   "publishConfig": {
     "access": "public"
-  },
-  "eslint-teamcity": {
-    "reporter": "inspections",
-    "report-name": "ESLint Violations",
-    "error-statistics-name": "ESLint Error Count",
-    "warning-statistics-name": "ESLint Warning Count"
   },
   "private": false,
   "devDependencies": {
     "@babel/cli": "^7.2.3",
-    "@xcritical/eslint-plugin-xc-front-lint": "^1.0.0",
-    "eslint-teamcity": "^2.1.0",
+    "@xcritical/eslint-plugin-xcritical": "^1.0.0",
     "rimraf": "^2.6.3"
   },
   "dependencies": {
     "@storybook/addon-storysource": "^5.1.11",
-    "@xcritical/xc-front-babel": "^1.0.0",
-    "@xcritical/xc-front-libs-utils": "^1.0.0",
+    "@xcritical/babelify": "^1.0.0",
+    "@xcritical/gulpify": "^1.0.0",
     "autoprefixer": "^9.5.0",
     "babel-loader": "^8.0.5",
     "chalk": "^2.4.2",
