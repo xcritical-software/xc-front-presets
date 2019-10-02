@@ -34,7 +34,7 @@ jobs:
         - git push --follow-tags --no-verify origin master
       deploy:
         provider: script
-        script: yarn build:lastcommit && yarn deploy
+        script: yarn build:lastcommit && npm run deploy
         skip_cleanup: true
         on:
           branch: master
