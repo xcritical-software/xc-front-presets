@@ -18,7 +18,7 @@
     "lint:fix": "yarn lint --fix",
     "compile": "yarn boltify run build",
     "build": "yarn clean && yarn compile",
-    "build:lastcommit": "yarn clean && yarn compile --since HEAD^",
+    "build:lastcommit": "yarn clean && yarn compile --since HEAD~1",
     "deploy": "bash ./copy-to-publish.sh && sh ./publish.sh",
     "check": "npm run lint && npm run test",
     "clean": "rimraf dist lib .publish"
