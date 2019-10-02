@@ -29,9 +29,7 @@ jobs:
         - git remote set-url origin https://${GH_TOKEN}@github.com/xcritical-software/xc-front-presets.git > /dev/null 2>&1
         - git fetch --tags --force
         - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
-        - yarn boltify version --message "chore(release):" --no-push
-      after_deploy:
-        - git push --follow-tags --no-verify origin master
+        - yarn boltify version --loglevel silly --message "chore(release):"
       deploy:
         provider: script
         script: yarn build:lastcommit && npm run deploy
