@@ -7,7 +7,7 @@ gulpfile
 
 Ваш `package.json`:
 ```
-"compile": "gulp --cwd . --gulpfile ./node_modules/@xcritical/xc-front-libs-utils/gulpfile.js compile",
+"compile": "gulp --cwd . --gulpfile ./node_modules/@xcritical/gulpify/gulpfile.js compile",
 ```
 
 Для более тонкой настройки используйте gulp-tasks.
@@ -19,7 +19,7 @@ gulp-tasks
 
 Пример `gulpfile` вашего проекта:
 ```
-const createTasks = require('@xcritical/xc-front-libs-utils/gulp-tasks');
+const createTasks = require('@xcritical/gulpify');
 createTasks('xc-front-kit');
 ```
 
@@ -43,7 +43,7 @@ component-name/
 Пример использования:
 
 ```js
-const componentPackage = require('@xcritical/xc-front-libs-utils/gulp/component-package');
+const componentPackage = require('@xcritical/gulpify/gulp/component-package');
 
 gulp.src('file.js')
     .pipe(componentPackage())

@@ -1,5 +1,5 @@
 module.exports = {
-  extends: require.resolve('./xc-front-lint/src/base'),
+  extends: require.resolve('./packages/eslint-plugin-xcritical/src/base'),
   rules: {
     'import/no-dynamic-require': 'off',
     'global-require': 'off',
