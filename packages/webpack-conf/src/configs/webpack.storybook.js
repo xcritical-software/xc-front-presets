@@ -7,7 +7,7 @@ const CSSModuleLoader = {
   },
 };
 
-module.exports = options => ({
+module.exports = (options) => ({
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     modules: ['node_modules'],

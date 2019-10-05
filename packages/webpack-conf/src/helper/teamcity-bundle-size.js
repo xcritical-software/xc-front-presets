@@ -24,7 +24,7 @@ const defaultLogger = {
 };
 
 function TeamcityBundleSizePlugin(callback) {
-  this.callback = Object.assign({}, defaultLogger, callback || {});
+  this.callback = { ...defaultLogger, ...callback || {} };
 
   this.apply = function apply(compiler) {
     Object.keys(this.callback).forEach((key) => {

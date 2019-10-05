@@ -11,11 +11,5 @@ module.exports = {
     prettier: {
       extends: require.resolve('./prettier'),
     },
-    mixin: {
-      extends: require.resolve('./mixin'),
-    },
-    typescript: {
-      extends: require.resolve('./typescript'),
-    },
   },
 };

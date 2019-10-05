@@ -19,7 +19,15 @@
     "url": "git+https://github.com/xcritical-software/xc-front-presets.git"
   },
   "keywords": [
-    "eslint"
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript",
+    "styleguide",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018"
   ],
   "author": "XCritical Software",
   "license": "MIT",
@@ -27,34 +35,25 @@
   "publishConfig": {
     "access": "public"
   },
-  "eslint-teamcity": {
-    "reporter": "inspections",
-    "report-name": "ESLint Violations",
-    "error-statistics-name": "ESLint Error Count",
-    "warning-statistics-name": "ESLint Warning Count"
-  },
   "private": false,
   "devDependencies": {
     "@xcritical/gulpify": "^1.0.0",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.0.0",
-    "@typescript-eslint/parser": "^2.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.11.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.0.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-chai-friendly": ">= 0.4.1",
+    "@typescript-eslint/eslint-plugin": "2.0.0",
+    "@typescript-eslint/parser": "2.0.0",
+    "babel-eslint": "10.0.1",
+    "eslint": "6.1.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-babel": "5.3.0",
     "eslint-plugin-class-methods-use-this-regexp": ">= 0.1.0",
     "eslint-plugin-import": ">= 2.14.0",
-    "eslint-plugin-jsdoc": "^3.14.1",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "7.14.3",
-    "eslint-plugin-react-hooks": "^1.0.2",
-    "eslint-teamcity": "^2.1.0",
-    "prettier": "^1.16.4"
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.15.1",    
+    "eslint-plugin-react-hooks": "1.7.0",
+    "prettier": "1.16.4"
   }
 }
