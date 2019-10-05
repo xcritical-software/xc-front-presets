@@ -1,7 +1,7 @@
 const helper = require('../helper');
 
 
-module.exports = options => ({
+module.exports = (options) => ({
   plugins: ((options.plugins && options.plugins.dev) || []).filter(Boolean),
   devServer: {
     contentBase: helper.paths.ROOT_DIR,

@@ -4,7 +4,7 @@ const clone = require('gulp-clone');
 const sourcemaps = require('gulp-sourcemaps');
 const ts = require('gulp-typescript');
 const rimraf = require('rimraf');
-const babelOptions = require('@xcritical/xc-front-babel');
+const babelOptions = require('@xcritical/babelify');
 const merge = require('merge2');
 const path = require('path');
 const fs = require('fs');
@@ -26,7 +26,8 @@ const defaultOptions = {
 };
 
 function createTasks(packageName, options = {}) {
-  options = Object.assign({}, defaultOptions, options);
+  // eslint-disable-next-line no-param-reassign
+  options = { ...defaultOptions, ...options };
 
   const tsProject = ts.createProject(options.tsConfig, { declaration: true });
 
@@ -35,7 +36,7 @@ function createTasks(packageName, options = {}) {
 
   const tasks = ['clean', 'js', ...(isTsEnabled ? ['ts'] : []), 'resources', 'typings', 'publish-files'];
 
-  gulp.task('clean', cb => rimraf(options.publishDir, cb));
+  gulp.task('clean', (cb) => rimraf(options.publishDir, cb));
 
   gulp.task(
     'ts',
@@ -54,7 +55,7 @@ function createTasks(packageName, options = {}) {
 
   gulp.task(
     'js',
-    done => gulp.src(options.jsGlob)
+    (done) => gulp.src(options.jsGlob)
       .pipe(sourcemaps.init())
       .pipe(babel(babelOptions(options.babelOptions)))
       .pipe(sourcemaps.write('.'))
@@ -64,7 +65,7 @@ function createTasks(packageName, options = {}) {
 
   gulp.task(
     'publish-files',
-    done => gulp.src(options.publishFilesGlob, { allowEmpty: true })
+    (done) => gulp.src(options.publishFilesGlob, { allowEmpty: true })
       .pipe(gulp.dest(options.publishDir))
       .on('error', done),
   );
@@ -83,7 +84,7 @@ function createTasks(packageName, options = {}) {
 
   gulp.task(
     'resources',
-    done => gulp.src(options.resourcesGlob, { allowEmpty: true })
+    (done) => gulp.src(options.resourcesGlob, { allowEmpty: true })
       .pipe(gulp.dest(options.publishDir))
       .on('error', done),
   );

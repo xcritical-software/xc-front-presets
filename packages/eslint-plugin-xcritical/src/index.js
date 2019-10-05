@@ -1,6 +1,6 @@
 /**
  * @fileoverview xc-front-lint
- * @author 123Software
+ * @author XCritical Software
  */
 
 module.exports = {
@@ -10,12 +10,6 @@ module.exports = {
     },
     prettier: {
       extends: require.resolve('./prettier'),
-    },
-    mixin: {
-      extends: require.resolve('./mixin'),
-    },
-    typescript: {
-      extends: require.resolve('./typescript'),
     },
   },
 };
