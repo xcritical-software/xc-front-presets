@@ -2,7 +2,7 @@
 	"name": "@xcritical/gulpify",
 	"version": "2.0.0",
 	"main": "index.js",
-	"description": "",
+	"description": "Gulp configuration",
 	"scripts": {
 		"lint:teamcity": "exit 0",
 		"compile": "bash ./compile.sh",
@@ -16,7 +16,7 @@
 		"url": "git+https://github.com:xcritical-software/xc-front-presets.git"
 	},
 	"keywords": [
-		"design system",
+		"gulp-config",
 		"library"
 	],
 	"author": "XCritical Software",
