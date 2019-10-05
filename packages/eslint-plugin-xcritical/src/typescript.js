@@ -1,3 +1,6 @@
+const { typescriptRules } = require('./rules');
+
+
 module.exports = {
   extends: [
     'plugin:@typescript-eslint/eslint-recommended',
@@ -14,7 +17,5 @@ module.exports = {
       jsx: true,
     },
   },
-  rules: {
-
-  },
+  rules: typescriptRules,
 };
