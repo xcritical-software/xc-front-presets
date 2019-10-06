@@ -1,7 +1,7 @@
 const typescriptEslintRecommendedRules = require('@typescript-eslint/eslint-plugin/dist/configs/all.json').rules;
 
 
-export const typescriptRules = {
+const typescriptRules = {
   ...typescriptEslintRecommendedRules,
   '@typescript-eslint/interface-name-prefix': ['error', {
     prefixWithI: 'always',
@@ -14,5 +14,5 @@ export const typescriptRules = {
   '@typescript-eslint/prefer-function-type': 'off',
   '@typescript-eslint/no-type-alias': 'off',
   '@typescript-eslint/no-explicit-any': 'warn',
-  '@typescript-eslint/quotes': 'single',
 };
+module.exports = typescriptRules;

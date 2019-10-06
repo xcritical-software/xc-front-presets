@@ -26,7 +26,6 @@ module.exports = [{
     '@typescript-eslint/prefer-function-type': 'off',
     '@typescript-eslint/no-type-alias': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/quotes': 'single',
   },
   settings: typescriptImportPluginSettings,
 }];
