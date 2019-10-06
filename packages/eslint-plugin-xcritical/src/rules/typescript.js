@@ -14,5 +14,7 @@ const typescriptRules = {
   '@typescript-eslint/prefer-function-type': 'off',
   '@typescript-eslint/no-type-alias': 'off',
   '@typescript-eslint/no-explicit-any': 'warn',
+  '@typescript-eslint/quotes': ['error', 'single'],
+  '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true, allowTypedFunctionExpressions: true, allowHigherOrderFunctions: true }],
 };
 module.exports = typescriptRules;

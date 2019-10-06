@@ -29,6 +29,7 @@ const commonRules = {
       children: true,
     },
   ],
+  'no-console': [1, { allow: ['error'] }],
   'react/button-has-type': 'warn',
   'react/prop-types': [
     'error',
@@ -40,6 +41,8 @@ const commonRules = {
   'react/require-default-props': 'warn',
   'react/forbid-prop-types': 'off',
   'react/sort-comp': 'warn',
+  'react/jsx-props-no-spreading': 0,
+  'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.jsx'] }],
   'jsx-a11y/href-no-hash': 'off',
   'jsx-a11y/anchor-is-valid': [
     'warn',
