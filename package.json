@@ -1,6 +1,6 @@
 {
   "name": "@xcritical/front-presets",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Frontend Presets for XCritical projects",
   "main": "index.js",
   "workspaces": [
