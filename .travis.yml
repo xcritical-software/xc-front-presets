@@ -23,18 +23,21 @@ jobs:
     - stage: next-version
       script: skip
       if: branch = master AND type = push AND commit_message !~ /(release)/
-      before_deploy:
+       before_deploy:
         - git config --local user.name "TravisCI"
         - git config --local user.email "frontend@xcritical.software"        
-        - git remote set-url origin https://${GH_TOKEN}@github.com/xcritical-software/xc-front-presets.git > /dev/null 2>&1
+        - git remote set-url origin https://${GH_TOKEN}@github.com/xcritical-software/xc-front-kit.git > /dev/null 2>&1
+        - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
         - git fetch --tags --force
         - git checkout master
         - git pull
-        - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
-        - yarn boltify version --loglevel silly --message "chore(release):"
+        - yarn boltify version --loglevel silly --message "chore(release):" --no-push
+      after_deploy: 
+        - git push --follow-tags --no-verify
       deploy:
         provider: script
         script: yarn build:lastcommit && npm run deploy
         skip_cleanup: true
         on:
           branch: master
+      
