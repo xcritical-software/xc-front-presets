@@ -8,8 +8,8 @@ module.exports = {
     base: {
       extends: require.resolve('./base'),
     },
-    prettier: {
-      extends: require.resolve('./prettier'),
+    typescript: {
+      extends: require.resolve('./typescript'),
     },
   },
 };

@@ -1,8 +1,9 @@
-const typescriptEslintRecommendedRules = require('@typescript-eslint/eslint-plugin/dist/configs/all.json').rules;
 const typescriptImportPluginSettings = require('eslint-plugin-import/config/typescript').settings;
 
+const rules = require('../rules/typescript');
 
-module.exports = [{
+
+module.exports = {
   files: ['**/*.{ts,tsx}'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -13,20 +14,6 @@ module.exports = [{
     },
   },
   plugins: ['@typescript-eslint'],
-  rules: {
-    ...typescriptEslintRecommendedRules,
-    '@typescript-eslint/interface-name-prefix': ['error', {
-      prefixWithI: 'always',
-    }],
-    '@typescript-eslint/indent': ['error', 2],
-    '@typescript-eslint/no-magic-numbers': 'off',
-    '@typescript-eslint/strict-boolean-expressions': 'off',
-    '@typescript-eslint/no-extra-parens': 'off',
-    '@typescript-eslint/typedef': 'off',
-    '@typescript-eslint/prefer-function-type': 'off',
-    '@typescript-eslint/no-type-alias': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/quotes': 'single',
-  },
+  rules: rules,
   settings: typescriptImportPluginSettings,
-}];
+};
