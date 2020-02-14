@@ -36,7 +36,7 @@
 		"@storybook/addon-storysource": "^5.1.11",
 		"@xcritical/babelify": "^1.0.0",
 		"@xcritical/gulpify": "^2.0.0",
-		"autoprefixer": "^9.5.0",
+		"autoprefixer": "^9.7.4",
 		"babel-loader": "^8.0.5",
 		"chalk": "^2.4.2",
 		"css-loader": "^2.1.1",
