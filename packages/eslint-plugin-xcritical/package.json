@@ -38,7 +38,7 @@
 	"private": false,
 	"devDependencies": {
 		"@xcritical/gulpify": "^2.0.0",
-		"rimraf": "^2.6.2"
+		"rimraf": "^3.0.2"
 	},
 	"dependencies": {
     "@typescript-eslint/eslint-plugin": "2.31.0",

@@ -30,7 +30,7 @@
   },
   "private": false,
   "devDependencies": {
-    "rimraf": "^2.6.2"
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
     "@babel/cli": "^7.2.3",
