@@ -11,7 +11,7 @@ const Vinyl = require('vinyl');
  */
 function getComponentPackage(file) {
   const dirname = path.dirname(file.path);
-  const componentName = path.parse(file.path).name;
+  const { name: componentName } = path.parse(file.path);
   const isIndexFileExist = fs.existsSync(path.join(dirname, 'index.js'));
   return JSON.stringify({
     main: isIndexFileExist ? 'index.js' : `${componentName}.js`,

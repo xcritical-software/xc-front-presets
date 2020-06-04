@@ -1,6 +1,7 @@
-const typescriptImportPluginSettings = require('eslint-plugin-import/config/typescript').settings;
+const { settings: typescriptImportPluginSettings } = require('eslint-plugin-import/config/typescript');
 
-const rules = require('../rules/typescript');
+const rulesTS = require('../rules/typescript');
+const rulesJS = require('../rules/common');
 
 
 module.exports = {
@@ -14,6 +15,9 @@ module.exports = {
     },
   },
   plugins: ['@typescript-eslint'],
-  rules: rules,
+  rules: {
+    ...rulesJS,
+    ...rulesTS,
+  },
   settings: typescriptImportPluginSettings,
 };
