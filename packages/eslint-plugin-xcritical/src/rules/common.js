@@ -4,8 +4,15 @@ const commonRules = {
   'class-methods-use-this': 'off',
   'import/prefer-default-export': 'off',
   'import/order': ['error', {
-    groups: [
-      ['builtin', 'external', 'internal'],
+    'newlines-between': 'always-and-inside-groups',
+    groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+    pathGroupsExcludedImportTypes: ['builtin'],
+    pathGroups: [
+      {
+        pattern: '@xcritical/**',
+        group: 'external',
+        position: 'after',
+      },
     ],
   }],
   'import/newline-after-import': ['error', {
@@ -67,6 +74,13 @@ const commonRules = {
     {
       functions: false,
     },
+  ],
+  'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 0 }],
+  'padding-line-between-statements': [
+    'error',
+    { blankLine: 'always', prev: 'if', next: '*' },
+    { blankLine: 'always', prev: '*', next: 'if' },
+    { blankLine: 'always', prev: '*', next: 'return' },
   ],
 };
 

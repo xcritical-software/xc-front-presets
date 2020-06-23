@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+
 const through = require('through2');
 const Vinyl = require('vinyl');
 
@@ -13,6 +14,7 @@ function getComponentPackage(file) {
   const dirname = path.dirname(file.path);
   const { name: componentName } = path.parse(file.path);
   const isIndexFileExist = fs.existsSync(path.join(dirname, 'index.js'));
+
   return JSON.stringify({
     main: isIndexFileExist ? 'index.js' : `${componentName}.js`,
     types: `${componentName}.d.js`,
@@ -28,8 +30,10 @@ function componentPackage() {
   function transform(file, encoding, callback) {
     if (file.isStream()) {
       callback();
+
       return;
     }
+
     const dirname = path.dirname(file.path);
 
     callback(null, new Vinyl({

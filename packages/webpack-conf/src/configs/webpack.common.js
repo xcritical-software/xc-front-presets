@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const TeamcityBundleSizePlugin = require('../helper/teamcity-bundle-size');
 const helper = require('../helper');
 

@@ -4,6 +4,7 @@ const defaultLogger = {
     if (process.env && !process.env.TEAMCITY_VERSION) {
       return;
     }
+
     let bundleSize = 0;
     const { assetsByChunkName, assets } = stats.toJson();
 
