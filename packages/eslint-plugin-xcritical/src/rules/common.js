@@ -30,16 +30,10 @@ const commonRules = {
   ],
   'prefer-const': 'warn',
   'prefer-destructuring': ['error', {
-    VariableDeclarator: {
-      array: false,
-      object: true,
-    },
-    AssignmentExpression: {
-      array: true,
-      object: false,
-    },
+    array: false,
+    object: true,
   }, {
-    enforceForRenamedProperties: true,
+    enforceForRenamedProperties: false,
   }],
   'react/jsx-curly-spacing': [
     'error',
