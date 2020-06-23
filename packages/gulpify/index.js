@@ -1,13 +1,18 @@
+const path = require('path');
+
+const fs = require('fs');
+
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const clone = require('gulp-clone');
 const sourcemaps = require('gulp-sourcemaps');
 const ts = require('gulp-typescript');
 const rimraf = require('rimraf');
-const babelOptions = require('@xcritical/babelify');
+
 const merge = require('merge2');
-const path = require('path');
-const fs = require('fs');
+
+const babelOptions = require('@xcritical/babelify');
+
 const componentPackage = require('./gulp/component-package');
 
 

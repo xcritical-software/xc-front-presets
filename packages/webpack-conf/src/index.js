@@ -1,4 +1,5 @@
 const merge = require('webpack-merge');
+
 const commonConfig = require('./configs/webpack.common');
 const helper = require('./helper');
 
@@ -6,6 +7,7 @@ const helper = require('./helper');
 function configCreator(options) {
   if (options.mode === 'storybook') {
     const storyBookConfig = require('./configs/webpack.storybook.js');
+
     return storyBookConfig(options);
   }
 
