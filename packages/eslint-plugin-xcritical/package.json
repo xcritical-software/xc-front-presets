@@ -1,6 +1,6 @@
 {
 	"name": "@xcritical/eslint-plugin-xcritical",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -37,7 +37,7 @@
 	},
 	"private": false,
 	"devDependencies": {
-		"@xcritical/gulpify": "^3.0.0",
+		"@xcritical/gulpify": "^3.1.0",
 		"rimraf": "^3.0.2"
 	},
 	"dependencies": {
