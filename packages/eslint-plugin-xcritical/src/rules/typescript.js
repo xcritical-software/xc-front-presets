@@ -1,4 +1,4 @@
-const { rules: typescriptEslintRecommendedRules } = require('@typescript-eslint/eslint-plugin/dist/configs/all.js');
+const { rules: typescriptEslintRecommendedRules } = require('@typescript-eslint/eslint-plugin/dist/configs/recommended');
 
 
 const typescriptRules = {
