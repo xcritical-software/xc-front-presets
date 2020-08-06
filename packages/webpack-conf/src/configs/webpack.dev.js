@@ -6,8 +6,6 @@ module.exports = (options) => ({
   devServer: {
     contentBase: helper.paths.ROOT_DIR,
     publicPath: '',
-    host: options.devServer.host,
-    port: options.devServer.port,
     compress: true,
     clientLogLevel: 'silent',
     open: true,
@@ -26,7 +24,7 @@ module.exports = (options) => ({
     },
     historyApiFallback: true,
     disableHostCheck: true,
-    proxy: options.devServer.proxy,
+    ...options.devServer,
   },
   performance: {
     hints: false,
