@@ -97,8 +97,8 @@ module.exports = (options) => {
       }),
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
       new HtmlWebpackPlugin({
-        template: helper.paths.pathResolve('public/index.html'),
-        favicon: helper.paths.pathResolve('public/favicon.ico'),
+        template: helper.paths.resolveExistPath('public/index.html'),
+        favicon: helper.paths.resolveExistPath('public/favicon.ico'),
         filename: 'index.html',
         minify: helper.env.isDevMode
           ? {}
