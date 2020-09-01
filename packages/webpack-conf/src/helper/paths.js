@@ -8,7 +8,7 @@ function pathResolve(...args) {
   return path.resolve(ROOT_DIR, ...args);
 }
 
-export function resolveExistPath(...args) {
+function resolveExistPath(...args) {
   try {
     const fullPath = path.resolve(ROOT_DIR, ...args);
 
@@ -37,4 +37,5 @@ module.exports = {
   PUBLIC_DIR: pathResolve('public'),
   babelrc,
   pathResolve,
+  resolveExistPath,
 };
