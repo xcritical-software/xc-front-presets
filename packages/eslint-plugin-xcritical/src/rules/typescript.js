@@ -1,4 +1,4 @@
-const { rules: typescriptEslintRecommendedRules } = require('@typescript-eslint/eslint-plugin/dist/configs/all.js');
+const { rules: typescriptEslintRecommendedRules } = require('@typescript-eslint/eslint-plugin/dist/configs/recommended');
 
 
 const typescriptRules = {
@@ -39,5 +39,8 @@ const typescriptRules = {
   '@typescript-eslint/init-declarations': 0,
   '@typescript-eslint/default-param-last': ['warn'],
   '@typescript-eslint/no-non-null-asserted-optional-chain': ['warn'],
+  '@typescript-eslint/no-loss-of-precision': 0,
+  '@typescript-eslint/ban-tslint-comment': 0,
+  '@typescript-eslint/no-confusing-non-null-assertion': 0,
 };
 module.exports = typescriptRules;
