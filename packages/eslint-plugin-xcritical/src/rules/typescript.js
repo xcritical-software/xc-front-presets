@@ -42,5 +42,6 @@ const typescriptRules = {
   '@typescript-eslint/no-loss-of-precision': 0,
   '@typescript-eslint/ban-tslint-comment': 0,
   '@typescript-eslint/no-confusing-non-null-assertion': 0,
+  '@typescript-eslint/no-empty-interface': 0
 };
 module.exports = typescriptRules;
