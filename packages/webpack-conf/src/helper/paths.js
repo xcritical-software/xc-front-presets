@@ -8,15 +8,17 @@ function pathResolve(...args) {
   return path.resolve(ROOT_DIR, ...args);
 }
 
-export function resolveExistPath(...args) {
+function resolveExistPath(...args) {
   try {
     const fullPath = path.resolve(ROOT_DIR, ...args);
+
     if (fs.existsSync(fullPath)) {
       return fullPath;
     }
   } catch (e) {
     console.warn(`${args.join('/')} not found`);
   }
+
   return null;
 }
 
@@ -35,4 +37,5 @@ module.exports = {
   PUBLIC_DIR: pathResolve('public'),
   babelrc,
   pathResolve,
+  resolveExistPath,
 };
