@@ -33,7 +33,7 @@
 		"rimraf": "^3.0.2"
 	},
 	"dependencies": {
-		"@storybook/addon-storysource": "^5.3.18",
+		"@storybook/addon-storysource": "^6.1.19",
 		"@xcritical/babelify": "^2.0.0",
 		"@xcritical/gulpify": "^3.1.0",
 		"autoprefixer": "^9.7.6",
