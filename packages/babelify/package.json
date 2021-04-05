@@ -8,7 +8,7 @@
 		"lint": "exit 0",
 		"lint:teamcity": "exit 0",
 		"lint:fix": "exit 0",
-		"compile": "bash ./compile.sh",
+		"compile": "sh ./compile.sh",
 		"build": "npm run clean && mkdir .publish && npm run compile",
 		"deploy": "npm publish",
 		"check": "npm run lint && npm run test",
