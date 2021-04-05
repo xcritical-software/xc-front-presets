@@ -1,4 +1,6 @@
-const { rules: typescriptEslintRecommendedRules } = require('@typescript-eslint/eslint-plugin/dist/configs/recommended');
+const {
+  rules: typescriptEslintRecommendedRules
+} = require('@typescript-eslint/eslint-plugin/dist/configs/recommended');
 
 
 const typescriptRules = {
@@ -15,8 +17,12 @@ const typescriptRules = {
   '@typescript-eslint/no-type-alias': 'off',
   '@typescript-eslint/no-explicit-any': 'warn',
   '@typescript-eslint/quotes': ['error', 'single'],
-  '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
-  '@typescript-eslint/no-unnecessary-condition': ['error', { ignoreRhs: true }],
+  '@typescript-eslint/no-use-before-define': ['error', {
+    functions: false
+  }],
+  '@typescript-eslint/no-unnecessary-condition': ['error', {
+    ignoreRhs: true
+  }],
   '@typescript-eslint/no-inferrable-types': 0, // this is a temporary solution due to problems in TS (see: https://github.com/microsoft/TypeScript/pull/30593)
   '@typescript-eslint/restrict-template-expressions': 0,
   '@typescript-eslint/space-before-function-paren': 0,
@@ -25,7 +31,9 @@ const typescriptRules = {
     allowTypedFunctionExpressions: true,
     allowHigherOrderFunctions: true,
   }],
-  'import/extensions': ['error', 'never', { svg: 'always' }],
+  'import/extensions': ['error', 'never', {
+    svg: 'always'
+  }],
   'import/no-extraneous-dependencies': 0,
   '@typescript-eslint/require-await': 0,
   '@typescript-eslint/promise-function-async': ['warn'],
@@ -42,5 +50,51 @@ const typescriptRules = {
   '@typescript-eslint/no-loss-of-precision': 0,
   '@typescript-eslint/ban-tslint-comment': 0,
   '@typescript-eslint/no-confusing-non-null-assertion': 0,
+  '@typescript-eslint/require-await': 0,
+  '@typescript-eslint/no-empty-interface': 0,
+  '@typescript-eslint/interface-name-prefix': 0,
+  '@typescript-eslint/promise-function-async': ['warn'],
+  '@typescript-eslint/no-non-null-assertion': ['warn'],
+  'react/prop-types': ['off'],
+  '@typescript-eslint/no-unnecessary-condition': ['warn'],
+  'import/extensions': ['error', 'never', {
+    svg: 'always'
+  }],
+  'import/no-extraneous-dependencies': 0,
+  '@typescript-eslint/prefer-optional-chain': 1,
+  '@typescript-eslint/prefer-nullish-coalescing': 1,
+  '@typescript-eslint/explicit-function-return-type': 0,
+  '@typescript-eslint/ban-types': ['warn'],
+  '@typescript-eslint/no-empty-function': ['warn'],
+  '@typescript-eslint/semi': ['error'],
+  '@typescript-eslint/member-delimiter-style': ['error', {
+    multiline: {
+      delimiter: 'semi',
+      requireLast: true,
+    },
+    singleline: {
+      delimiter: 'semi',
+      requireLast: true,
+    },
+    overrides: {
+      interface: {
+        multiline: {
+          delimiter: 'semi',
+          requireLast: true,
+        },
+      },
+    },
+  }, ],
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      selector: 'interface',
+      format: ['PascalCase'],
+      custom: {
+        regex: '^I([A-Za-z]+)',
+        match: true,
+      },
+    },
+  ],
 };
 module.exports = typescriptRules;
