@@ -6,7 +6,7 @@ const helper = require('./helper');
 
 function configCreator(options) {
   if (options.mode === 'storybook') {
-    const storyBookConfig = require('./configs/webpack.storybook.js');
+    const storyBookConfig = require('./configs/webpack.storybook');
 
     return storyBookConfig(options);
   }
