@@ -33,6 +33,7 @@ module.exports = (options) => {
         ...aliases.development,
         ...aliases.production,
       } : aliases.production,
+      ...options.resolve,
     },
     module: {
       rules: [
