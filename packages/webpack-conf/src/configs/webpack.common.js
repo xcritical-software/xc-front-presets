@@ -14,6 +14,7 @@ module.exports = (options) => {
 
   const aliases = options.aliases || { development: {}, production: {} };
 
+
   return {
     mode: helper.env.getMode,
     context: helper.paths.SRC_DIR,
@@ -34,6 +35,7 @@ module.exports = (options) => {
         ...aliases.production,
       } : aliases.production,
       ...options.resolve,
+      ...(helper.env.isDevMode ? devOptions.resolve : prodOptions.resolve),
     },
     module: {
       rules: [
