@@ -9,7 +9,7 @@ module.exports = (options) => ({
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async',
     }),
-    new webpack.HashedModuleIdsPlugin({
+    new webpack.ids.HashedModuleIdsPlugin({
       hashFunction: 'sha256',
       hashDigest: 'hex',
       hashDigestLength: 8,

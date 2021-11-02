@@ -32,7 +32,9 @@ function getBabelOptions(options) {
     babelrc: false,
     cacheDirectory: env.isDevMode,
     presets: babelMainOptions.presets.concat(projectPresets).filter(filter),
-    plugins: babelMainOptions.plugins.concat(projectPlugins, projectEnvPlugins).filter(filter),
+    plugins: babelMainOptions.plugins
+      .concat(projectPlugins, projectEnvPlugins)
+      .filter(filter),
   };
 }
 
@@ -51,17 +53,18 @@ function generateStyleLoaders(cssOptions, preProcessor) {
     {
       loader: require.resolve('postcss-loader'),
       options: {
-        ident: 'postcss',
-        plugins: function plugins() {
-          return [
-            require('postcss-preset-env')({
-              autoprefixer: {
-                flexbox: 'no-2009',
-              },
-              stage: 3,
-            }),
-            require('postcss-flexbugs-fixes'),
-          ];
+        postcssOptions: {
+          plugins: function plugins() {
+            return [
+              require('postcss-preset-env')({
+                autoprefixer: {
+                  flexbox: 'no-2009',
+                },
+                stage: 3,
+              }),
+              require('postcss-flexbugs-fixes'),
+            ];
+          },
         },
         sourceMap: env.isNeedSourceMaps,
       },
