@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
@@ -8,11 +7,6 @@ module.exports = (options) => ({
     new OptimizeCSSAssetsPlugin(),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async',
-    }),
-    new webpack.ids.HashedModuleIdsPlugin({
-      hashFunction: 'sha256',
-      hashDigest: 'hex',
-      hashDigestLength: 8,
     }),
   ].concat((options.plugins && options.plugins.prod) || []).filter(Boolean),
 
