@@ -167,7 +167,7 @@ module.exports = configCreator({
     
     - getMode - возвращает строку с текущим окружением 'development' или 'production'
     
-    - isNeedSourceMaps - наличие в билд скрипте флага --source-maps, данный флаг активирует создание source-maps
+    - isNeedSourceMaps - для генерации source-maps, необходима установка переменной окружения process.env.SOURCE_MAPS=true
     
     - showState - вывод в консоль выше перечисленных переменных
 
