@@ -15,6 +15,7 @@ module.exports = (options) => {
   const aliases = options.aliases || { development: {}, production: {} };
 
   return {
+    cache: helper.env.isDevMode ? devOptions.cache : prodOptions.cache,
     mode: helper.env.getMode,
     context: helper.paths.SRC_DIR,
     stats: {
