@@ -1,6 +1,6 @@
 {
 	"name": "@xcritical/webpack-conf",
-	"version": "4.0.2",
+	"version": "4.0.3",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
