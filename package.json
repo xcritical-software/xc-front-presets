@@ -16,7 +16,7 @@
     "lint": "yarn eslint \"packages/**/*.{js,jsx,ts,tsx}\"",
     "lint:teamcity": "yarn lint --format ./node_modules/eslint-teamcity/index.js",
     "lint:fix": "yarn lint --fix",
-    "compile": "yarn boltify run build",
+    "compile": "yarn lerna run build",
     "build": "yarn clean && yarn compile",
     "build:lastcommit": "yarn clean && yarn compile --since HEAD~1",
     "deploy": "bash ./copy-to-publish.sh && sh ./publish.sh",
