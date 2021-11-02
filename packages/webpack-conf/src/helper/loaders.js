@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const xcFrontBabel = require('../../../babelify/index');
+const xcFrontBabel = require('@xcritical/babelify');
 
 const paths = require('./paths');
 const env = require('./env');
