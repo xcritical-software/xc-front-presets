@@ -1,6 +1,6 @@
 {
 	"name": "@xcritical/webpack-conf",
-	"version": "4.0.3",
+	"version": "4.0.4",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -36,7 +36,7 @@
 		"@storybook/addon-storysource": "^5.3.18",
 		"@xcritical/babelify": "^2.0.0",
 		"@xcritical/gulpify": "^3.1.0",
-		"autoprefixer": "^9.7.6",
+		"autoprefixer": "^10.4.0",
 		"babel-loader": "^8.1.0",
 		"chalk": "^4.0.0",
 		"css-loader": "^6.5.0",
