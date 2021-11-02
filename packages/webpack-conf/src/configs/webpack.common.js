@@ -20,7 +20,6 @@ module.exports = (options) => {
     stats: {
       all: false,
       modules: true,
-      maxModules: 0,
       errors: true,
       warnings: true,
       timings: true,
@@ -34,13 +33,8 @@ module.exports = (options) => {
         (helper.env.isDevMode
           ? devOptions.publicPath
           : prodOptions.publicPath) || '/',
-      // maybe replace to only contenthash ? https://webpack.js.org/migrate/5/#update-outdated-options
-      filename: helper.env.isDevMode
-        ? '[name].[hash:8].js'
-        : '[name].[contenthash].js',
-      chunkFilename: helper.env.isDevMode
-        ? '[name].[hash:8].js'
-        : '[name].[contenthash].js',
+      filename: '[name].[contenthash].js',
+      chunkFilename: '[name].[contenthash].js',
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
@@ -111,12 +105,8 @@ module.exports = (options) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: helper.env.isDevMode
-          ? '[name].[hash:8].css'
-          : '[name].[contenthash].css',
-        chunkFilename: helper.env.isDevMode
-          ? '[name].[hash:8].css'
-          : '[name].[contenthash].css',
+        filename: '[name].[contenthash].css',
+        chunkFilename: '[name].[contenthash].css',
       }),
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,

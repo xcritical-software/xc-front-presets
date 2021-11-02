@@ -5,12 +5,6 @@ const helper = require('./helper');
 
 
 function configCreator(options) {
-  if (options.mode === 'storybook') {
-    const storyBookConfig = require('./configs/webpack.storybook');
-
-    return storyBookConfig(options);
-  }
-
   const mode = helper.env.isDevMode ? 'dev' : 'prod';
   const envConfig = require(`./configs/webpack.${mode}.js`);
 
