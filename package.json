@@ -6,11 +6,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "bolt": {
-    "workspaces": [
-      "packages/*"
-    ]
-  },
   "scripts": {
     "test": "exit 0",
     "lint": "yarn eslint \"packages/**/*.{js,jsx,ts,tsx}\"",

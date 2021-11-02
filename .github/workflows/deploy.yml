@@ -60,7 +60,7 @@ jobs:
         run: 'yarn lerna version --yes --no-push --conventional-commits --conventional-prerelease --preid beta -m "chore(release): Prerelease of components:"  --no-commit-hooks'
       - name: Publish to NPM
         if: ${{ !startsWith(github.event.head_commit.message, 'chore(release)') }}
-        run: yarn build && npm run deploy
+        run: yarn build:lastcommit && npm run deploy
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Push tags
