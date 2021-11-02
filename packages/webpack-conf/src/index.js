@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 
 const commonConfig = require('./configs/webpack.common');
 const helper = require('./helper');
@@ -14,7 +14,7 @@ function configCreator(options) {
   const mode = helper.env.isDevMode ? 'dev' : 'prod';
   const envConfig = require(`./configs/webpack.${mode}.js`);
 
-  return merge.smart(commonConfig(options), envConfig(options));
+  return merge(commonConfig(options), envConfig(options));
 }
 
 module.exports = {

@@ -29,7 +29,7 @@ function TeamcityBundleSizePlugin(callback) {
 
   this.apply = function apply(compiler) {
     Object.keys(this.callback).forEach((key) => {
-      compiler.plugin(key, this.callback[key]);
+      compiler.hooks[key].tap('TeamcityBundleSizePlugin', this.callback[key]);
     });
   };
 }
