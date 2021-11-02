@@ -5,7 +5,7 @@
 	"description": "Gulp configuration",
 	"scripts": {
 		"lint:teamcity": "exit 0",
-		"compile": "bash ./compile.sh",
+		"compile": "sh ./compile.sh",
 		"build": "npm run clean && mkdir .publish && npm run compile",
 		"deploy": "npm publish",
 		"check": "npm run lint && npm run test",
@@ -30,7 +30,6 @@
 		"babel-plugin-react-transform": "^3.0.0",
 		"event-stream": "^4.0.1",
 		"mkdirp": "^1.0.4",
-		"rimraf": "^2.6.2",
 		"typescript": "^3.9.2"
 	},
 	"peerDependencies": {

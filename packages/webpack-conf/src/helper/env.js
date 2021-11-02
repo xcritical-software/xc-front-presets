@@ -3,7 +3,7 @@ const chalk = require('chalk');
 
 const isDevMode = process.env.NODE_ENV !== 'production';
 const getMode = isDevMode ? 'development' : 'production';
-const isNeedSourceMaps = !!process.argv.includes('--source-maps');
+const isNeedSourceMaps = !!process.env.SOURCE_MAPS;
 
 function showState() {
   console.info(

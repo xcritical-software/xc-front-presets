@@ -17,22 +17,36 @@ module.exports = (options) => {
   return {
     mode: helper.env.getMode,
     context: helper.paths.SRC_DIR,
+    stats: {
+      all: false,
+      modules: true,
+      errors: true,
+      warnings: true,
+      timings: true,
+    },
     entry: {
       app: './index',
     },
     output: {
       path: helper.paths.BUILD_DIR,
-      publicPath: (helper.env.isDevMode ? devOptions.publicPath : prodOptions.publicPath) || '/',
-      filename: helper.env.isDevMode ? '[name].[hash:8].js' : '[name].[contenthash].js',
-      chunkFilename: helper.env.isDevMode ? '[name].[hash:8].js' : '[name].[contenthash].js',
+      publicPath:
+        (helper.env.isDevMode
+          ? devOptions.publicPath
+          : prodOptions.publicPath) || '/',
+      filename: '[name].[contenthash].js',
+      chunkFilename: '[name].[contenthash].js',
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
       modules: ['node_modules'],
-      alias: helper.env.isDevMode ? {
-        ...aliases.development,
-        ...aliases.production,
-      } : aliases.production,
+      alias: helper.env.isDevMode
+        ? {
+          ...aliases.development,
+          ...aliases.production,
+        }
+        : aliases.production,
+      ...options.resolve,
+      ...(helper.env.isDevMode ? devOptions.resolve : prodOptions.resolve),
     },
     module: {
       rules: [
@@ -61,8 +75,7 @@ module.exports = (options) => {
             },
             {
               test: /\.(css)$/,
-              loader: helper.loaders.generateStyleLoaders({ importLoaders: 1 }),
-              sideEffects: true,
+              use: helper.loaders.generateStyleLoaders({ importLoaders: 1 }),
             },
             {
               test: /\.(eot|ttf|woff|woff2)$/,
@@ -92,10 +105,13 @@ module.exports = (options) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: helper.env.isDevMode ? '[name].[hash:8].css' : '[name].[contenthash].css',
-        chunkFilename: helper.env.isDevMode ? '[name].[hash:8].css' : '[name].[contenthash].css',
+        filename: '[name].[contenthash].css',
+        chunkFilename: '[name].[contenthash].css',
       }),
-      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/,
+      }),
       new HtmlWebpackPlugin({
         template: helper.paths.resolveExistPath('public/index.html'),
         favicon: helper.paths.resolveExistPath('public/favicon.ico'),
@@ -116,11 +132,9 @@ module.exports = (options) => {
           },
       }),
       new TeamcityBundleSizePlugin(),
-    ].concat((options.plugins && options.plugins.common) || []).filter(Boolean),
-    stats: {
-      children: false,
-      modules: false,
-    },
+    ]
+      .concat((options.plugins && options.plugins.common) || [])
+      .filter(Boolean),
     optimization: options.optimization,
     devtool: helper.env.isNeedSourceMaps ? 'source-map' : false,
   };
