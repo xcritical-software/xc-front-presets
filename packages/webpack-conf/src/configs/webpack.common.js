@@ -78,17 +78,18 @@ module.exports = (options) => {
               test: /\.(css)$/,
               use: helper.loaders.generateStyleLoaders({ importLoaders: 1 }),
             },
-            {
-              test: /\.(eot|ttf|woff|woff2)$/,
-              use: [
-                {
-                  loader: 'file-loader',
-                  options: {
-                    name: 'fonts/[name].[ext]',
-                  },
-                },
-              ],
-            },
+            // TODO need fix config. fonts are not processed on the client
+            // {
+            //   test: /\.(eot|ttf|woff|woff2)$/,
+            //   use: [
+            //     {
+            //       loader: 'file-loader',
+            //       options: {
+            //         name: 'fonts/[name].[ext]',
+            //       },
+            //     },
+            //   ],
+            // },
             {
               test: /\.(png|jpg|svg|gif)$/,
               use: [
