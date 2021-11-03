@@ -3,6 +3,6 @@ module.exports = {
   rules: {
     'import/no-dynamic-require': 'off',
     'global-require': 'off',
-    'object-shorthand': 'off'
-  }
+    'object-shorthand': 'off',
+  },
 };
