@@ -1,6 +1,6 @@
 {
 	"name": "@xcritical/babelify",
-	"version": "2.0.1-beta.0",
+	"version": "2.0.1",
 	"description": "Babel config",
 	"main": "index.js",
 	"scripts": {
