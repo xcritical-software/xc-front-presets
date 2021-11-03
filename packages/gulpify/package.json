@@ -1,12 +1,12 @@
 {
 	"name": "@xcritical/gulpify",
-	"version": "3.1.0",
+	"version": "3.2.0-beta.0",
 	"main": "index.js",
 	"description": "Gulp configuration",
 	"scripts": {
 		"lint:teamcity": "exit 0",
 		"compile": "sh ./compile.sh",
-		"build": "npm run clean && mkdir .publish && npm run compile",
+		"_build": "npm run clean && mkdir .publish && npm run compile",
 		"deploy": "npm publish",
 		"check": "npm run lint && npm run test",
 		"clean": "rimraf dist lib .publish"
@@ -25,7 +25,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"private": false,
+	"private": true,
 	"devDependencies": {
 		"babel-plugin-react-transform": "^3.0.0",
 		"event-stream": "^4.0.1",
@@ -36,7 +36,7 @@
 		"typescript": ">=3.5.3 <3.10.0"
 	},
 	"dependencies": {
-		"@xcritical/babelify": "^2.0.0",
+		"@xcritical/babelify": "^2.0.1-beta.0",
 		"gulp": "^4.0.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-clone": "^2.0.1",
