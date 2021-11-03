@@ -6,7 +6,7 @@
 	"scripts": {
 		"lint:teamcity": "exit 0",
 		"compile": "sh ./compile.sh",
-		"build": "npm run clean && mkdir .publish && npm run compile",
+		"_build": "npm run clean && mkdir .publish && npm run compile",
 		"deploy": "npm publish",
 		"check": "npm run lint && npm run test",
 		"clean": "rimraf dist lib .publish"
