@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0-beta.0](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/eslint-plugin-xcritical@4.1.0...@xcritical/eslint-plugin-xcritical@4.2.0-beta.0) (2021-11-03)
+
+
+### Features
+
+* **eslint:** update configuration ([43c6c15](https://github.com/xcritical-software/xc-front-presets/commit/43c6c152ac85e050c2bbb045c44fe0a0cdb650ab))
+* **eslint:** update dependecies ([2f86fba](https://github.com/xcritical-software/xc-front-presets/commit/2f86fba3a513acecf86745d52c025037510f8efa))
+
+
+
+
+
 # [4.1.0](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/eslint-plugin-xcritical@4.1.0-beta.0...@xcritical/eslint-plugin-xcritical@4.1.0) (2021-11-03)
 
 **Note:** Version bump only for package @xcritical/eslint-plugin-xcritical
