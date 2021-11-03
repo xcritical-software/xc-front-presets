@@ -10,7 +10,6 @@
   "scripts": {
     "test": "exit 0",
     "lint": "yarn eslint \"packages/**/*.js\"",
-    "lint:teamcity": "yarn lint --format ./node_modules/eslint-teamcity/index.js",
     "lint:fix": "yarn lint --fix",
     "compile": "yarn lerna run build",
     "build": "yarn clean && yarn compile",
