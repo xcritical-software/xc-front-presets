@@ -4,8 +4,10 @@ const commonRules = require('./rules/common');
 module.exports = {
   extends: ['airbnb'],
   plugins: ['react-hooks'],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
+    requireConfigFile: false,
+    ecmaVersion: 8,
     ecmaFeatures: {
       jsx: true,
     },
