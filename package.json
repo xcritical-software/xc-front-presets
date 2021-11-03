@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Frontend Presets for XCritical projects",
   "main": "index.js",
+  "type": "commonjs",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "test": "exit 0",
-    "lint": "yarn eslint \"packages/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "yarn eslint \"packages/**/*.js\"",
     "lint:teamcity": "yarn lint --format ./node_modules/eslint-teamcity/index.js",
     "lint:fix": "yarn lint --fix",
     "compile": "yarn lerna run build",
