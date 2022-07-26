@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.2](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.2.2-beta.1...@xcritical/webpack-conf@4.2.2) (2022-07-26)
+
+
+### Bug Fixes
+
+* **deps:** bump postcss-loader from 6.2.1 to 7.0.1 ([706452f](https://github.com/xcritical-software/xc-front-presets/commit/706452f48cb7eccf5f696a0e26aebabcce1d4c69))
+
+
+
+
+
 ## [4.2.2-beta.1](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.2.2-beta.0...@xcritical/webpack-conf@4.2.2-beta.1) (2022-07-26)
 
 

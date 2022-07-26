@@ -1,6 +1,6 @@
 {
 	"name": "@xcritical/gulpify",
-	"version": "3.2.1-beta.0",
+	"version": "3.2.1",
 	"main": "index.js",
 	"description": "Gulp configuration",
 	"scripts": {
@@ -36,7 +36,7 @@
 		"typescript": ">=3.5.3 <3.10.0"
 	},
 	"dependencies": {
-		"@xcritical/babelify": "^2.0.1",
+		"@xcritical/babelify": "^2.0.2",
 		"gulp": "^4.0.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-clone": "^2.0.1",
