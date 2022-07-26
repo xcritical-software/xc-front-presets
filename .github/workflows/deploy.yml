@@ -42,6 +42,8 @@ jobs:
       - name: Install node_modules
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install
+      - name: Build
+        run: yarn build:prod
       - name: Lint
         run: yarn lint
       - name: Tests
@@ -52,15 +54,20 @@ jobs:
           git config --local user.email "frontend@xcritical.software"
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: 'Update version develop'
+        if: ${{ !startsWith(github.event.head_commit.message, 'chore(release)') && github.event.ref == 'refs/heads/develop' }}
+        run: 'yarn version:beta --no-commit-hooks'
       - name: 'Update version release'
-        if: ${{ !startsWith(github.event.head_commit.message, 'chore(release)') && github.ref == 'refs/heads/master' }}
-        run: 'yarn lerna version --yes --no-push --conventional-commits --conventional-graduate -m "chore(release): Release of components:"  --no-commit-hooks'
-      - name: 'Update version prerelise'
-        if: ${{ !startsWith(github.event.head_commit.message, 'chore(release)') && github.ref == 'refs/heads/develop' }}
-        run: 'yarn lerna version --yes --no-push --conventional-commits --conventional-prerelease --preid beta -m "chore(release): Prerelease of components:"  --no-commit-hooks'
-      - name: Publish to NPM
-        if: ${{ !startsWith(github.event.head_commit.message, 'chore(release)') }}
-        run: yarn build:lastcommit && npm run deploy
+        if: ${{ !startsWith(github.event.head_commit.message, 'chore(release)') && github.event.ref == 'refs/heads/master' }}
+        run: 'yarn version:release --no-commit-hooks'
+      - name: 'Publish develop'
+        if: ${{ !startsWith(github.event.head_commit.message, 'chore(release)') && github.event.ref == 'refs/heads/develop' }}
+        run: 'yarn publish:from-git --canary'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: 'Publish release'
+        if: ${{ !startsWith(github.event.head_commit.message, 'chore(release)') && github.event.ref == 'refs/heads/master' }}
+        run: 'yarn publish:from-git '
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Push tags
