@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.2-beta.2](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/eslint-plugin-xcritical@4.2.2-beta.1...@xcritical/eslint-plugin-xcritical@4.2.2-beta.2) (2022-07-26)
+
+
+### Bug Fixes
+
+* **deps:** bump @babel/eslint-parser from 7.16.0 to 7.18.9 ([eb94271](https://github.com/xcritical-software/xc-front-presets/commit/eb9427177b9948b3f4c5dd12eec960fe6deab109))
+
+
+
+
+
 ## [4.2.2-beta.1](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/eslint-plugin-xcritical@4.2.2-beta.0...@xcritical/eslint-plugin-xcritical@4.2.2-beta.1) (2022-07-26)
 
 
