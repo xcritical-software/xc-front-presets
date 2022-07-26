@@ -3,9 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [4.2.1-beta.0](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.2.0...@xcritical/webpack-conf@4.2.1-beta.0) (2021-11-03)
+## [4.2.1](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.2.0...@xcritical/webpack-conf@4.2.1) (2021-11-03)
 
-**Note:** Version bump only for package @xcritical/webpack-conf
+
+### Bug Fixes
+
+* **webpack-conf:** Comment file loader ([c0a83f2](https://github.com/xcritical-software/xc-front-presets/commit/c0a83f2d69d9f0fe77a06162e556d47cbcffc5c6))
 
 
 
