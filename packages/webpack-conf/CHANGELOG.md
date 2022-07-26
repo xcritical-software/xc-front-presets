@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.2-beta.1](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.2.2-beta.0...@xcritical/webpack-conf@4.2.2-beta.1) (2022-07-26)
+
+
+### Bug Fixes
+
+* **deps:** bump chalk from 4.1.2 to 5.0.1 ([2cdbca9](https://github.com/xcritical-software/xc-front-presets/commit/2cdbca9e589bb4876b965bfb2aaf81b11acd5b08))
+* **deps:** bump ts-loader from 9.2.6 to 9.3.1 ([b5bf5fb](https://github.com/xcritical-software/xc-front-presets/commit/b5bf5fba4c68fdbfa6b61192ad3d7819b0163dee))
+* **deps:** bump typescript from 4.4.4 to 4.7.4 ([311c60c](https://github.com/xcritical-software/xc-front-presets/commit/311c60c958be500efd677e4476af3d914cc8526b))
+
+
+
+
+
 ## [4.2.2-beta.0](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.2.1...@xcritical/webpack-conf@4.2.2-beta.0) (2022-07-26)
 
 **Note:** Version bump only for package @xcritical/webpack-conf

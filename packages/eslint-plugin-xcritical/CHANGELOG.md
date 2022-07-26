@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.2-beta.1](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/eslint-plugin-xcritical@4.2.2-beta.0...@xcritical/eslint-plugin-xcritical@4.2.2-beta.1) (2022-07-26)
+
+
+### Bug Fixes
+
+* **deps:** bump @typescript-eslint/eslint-plugin from 5.3.0 to 5.31.0 ([6243227](https://github.com/xcritical-software/xc-front-presets/commit/624322784a9ad15eff06bfcd64dc338d0e98172a))
+* **deps:** bump @typescript-eslint/parser from 5.3.0 to 5.31.0 ([b82a432](https://github.com/xcritical-software/xc-front-presets/commit/b82a4325a8509128d00bad88fe0c138a920b7bae))
+* **deps:** bump eslint from 8.1.0 to 8.20.0 ([ad98d51](https://github.com/xcritical-software/xc-front-presets/commit/ad98d513c40b35c1958cff532473a29f39e45c60))
+* **deps:** bump eslint-plugin-jsx-a11y from 6.4.1 to 6.6.1 ([9eda19a](https://github.com/xcritical-software/xc-front-presets/commit/9eda19a49c41d38ec9746d3a82b130bdb4a2e79d))
+
+
+
+
+
 ## [4.2.2-beta.0](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/eslint-plugin-xcritical@4.2.1...@xcritical/eslint-plugin-xcritical@4.2.2-beta.0) (2022-07-26)
 
 **Note:** Version bump only for package @xcritical/eslint-plugin-xcritical
