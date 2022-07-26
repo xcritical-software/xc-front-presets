@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.2-beta.0](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.2.1...@xcritical/webpack-conf@4.2.2-beta.0) (2022-07-26)
+
+**Note:** Version bump only for package @xcritical/webpack-conf
+
+
+
+
+
 ## [4.2.1](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.2.0...@xcritical/webpack-conf@4.2.1) (2021-11-03)
 
 
