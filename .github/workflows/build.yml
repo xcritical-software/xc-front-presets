@@ -30,7 +30,7 @@ jobs:
       - name: Install node_modules
         run: yarn install
       - name: Build packages
-        run: yarn build:prod
+        run: yarn build
       - name: Linting
         run: yarn lint
       - name: Tests
