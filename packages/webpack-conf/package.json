@@ -1,6 +1,6 @@
 {
 	"name": "@xcritical/webpack-conf",
-	"version": "4.2.2",
+	"version": "4.3.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -37,7 +37,7 @@
 		"@xcritical/gulpify": "3.1.0",
 		"autoprefixer": "^10.4.0",
 		"babel-loader": "^8.1.0",
-		"chalk": "^5.0.1",
+		"chalk": "^4.0.0",
 		"css-loader": "^6.5.0",
 		"file-loader": "^6.2.0",
 		"html-webpack-plugin": "^5.5.0",
