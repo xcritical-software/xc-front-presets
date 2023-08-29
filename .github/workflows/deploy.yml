@@ -2,7 +2,7 @@
 
 name: Deploy
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
@@ -14,18 +14,17 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-
   Deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
@@ -49,15 +48,15 @@ jobs:
       - name: Tests
         run: yarn test
       - name: Git init
-        run: | 
+        run: |
           git config --local user.name "TravisCI"
           git config --local user.email "frontend@xcritical.software"
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-      - name: 'Update version release'
+      - name: "Update version release"
         if: ${{ !startsWith(github.event.head_commit.message, 'chore(release)') && github.ref == 'refs/heads/master' }}
         run: 'yarn lerna version --yes --no-push --conventional-commits --conventional-graduate -m "chore(release): Release of components:"  --no-commit-hooks'
-      - name: 'Update version prerelise'
+      - name: "Update version prerelise"
         if: ${{ !startsWith(github.event.head_commit.message, 'chore(release)') && github.ref == 'refs/heads/develop' }}
         run: 'yarn lerna version --yes --no-push --conventional-commits --conventional-prerelease --preid beta -m "chore(release): Prerelease of components:"  --no-commit-hooks'
       - name: Publish to NPM
