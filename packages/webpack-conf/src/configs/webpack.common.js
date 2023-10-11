@@ -121,7 +121,7 @@ module.exports = (options) => {
         minify: helper.env.isDevMode
           ? {}
           : {
-            removeComments: true,
+            removeComments: false,
             collapseWhitespace: true,
             removeRedundantAttributes: true,
             useShortDoctype: true,
