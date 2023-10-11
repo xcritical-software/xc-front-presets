@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.6.0](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.2.2...@xcritical/webpack-conf@4.6.0) (2023-10-11)
+
+
+### Bug Fixes
+
+* disable remove comments in html ([93d3186](https://github.com/xcritical-software/xc-front-presets/commit/93d318633d0f0a095aea95960955b5810c322e0f))
+
+
+### Features
+
+* **webpack:** update webpack ([580314c](https://github.com/xcritical-software/xc-front-presets/commit/580314c24fdf48fbbd4a8b195152fb9b6f346152))
+* **webpack:** update webpack ([a07b8e2](https://github.com/xcritical-software/xc-front-presets/commit/a07b8e2bdf810374515e1d6f800c9db02183f8c3))
+
+
+
+
+
 ## [4.2.2](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.2.2-beta.1...@xcritical/webpack-conf@4.2.2) (2022-07-26)
 
 
