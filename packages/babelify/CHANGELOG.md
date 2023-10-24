@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/babelify@2.0.2...@xcritical/babelify@2.0.4) (2023-10-24)
+
+
+### Bug Fixes
+
+* update default rules ([c27da9f](https://github.com/xcritical-software/xc-front-presets/commit/c27da9f1f513cd896aa575865c4105c2252cb77e))
+
+
+
+
+
 ## [2.0.2](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/babelify@2.0.1...@xcritical/babelify@2.0.2) (2022-07-26)
 
 

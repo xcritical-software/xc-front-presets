@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.6.2](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.6.0...@xcritical/webpack-conf@4.6.2) (2023-10-24)
+
+
+### Bug Fixes
+
+* update default rules ([c27da9f](https://github.com/xcritical-software/xc-front-presets/commit/c27da9f1f513cd896aa575865c4105c2252cb77e))
+
+
+
+
+
 # [4.6.0](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.2.2...@xcritical/webpack-conf@4.6.0) (2023-10-11)
 
 

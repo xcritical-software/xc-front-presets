@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/eslint-plugin-xcritical@4.2.2...@xcritical/eslint-plugin-xcritical@7.0.0) (2023-10-24)
+
+
+### Bug Fixes
+
+* update default rules ([c27da9f](https://github.com/xcritical-software/xc-front-presets/commit/c27da9f1f513cd896aa575865c4105c2252cb77e))
+* update default rules ([c0c8e7a](https://github.com/xcritical-software/xc-front-presets/commit/c0c8e7a3c84056e2e6b18aac8dc541c96ccb105f))
+
+
+* feat!: update @typescript-eslint to 6.9.0 ([855c681](https://github.com/xcritical-software/xc-front-presets/commit/855c681efb814f9e7b63fc4076c5fdc63cf6fea5))
+
+
+### BREAKING CHANGES
+
+* update @typescript-eslint
+
+
+
+
+
 ## [4.2.2](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/eslint-plugin-xcritical@4.2.2-beta.1...@xcritical/eslint-plugin-xcritical@4.2.2) (2022-07-26)
 
 
