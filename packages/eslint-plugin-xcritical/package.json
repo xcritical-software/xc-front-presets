@@ -1,6 +1,6 @@
 {
 	"name": "@xcritical/eslint-plugin-xcritical",
-	"version": "4.2.2",
+	"version": "5.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {

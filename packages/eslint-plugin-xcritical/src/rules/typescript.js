@@ -1,10 +1,21 @@
-const {
-  rules: typescriptEslintRecommendedRules,
-} = require('@typescript-eslint/eslint-plugin/dist/configs/recommended');
-
 
 const typescriptRules = {
-  ...typescriptEslintRecommendedRules,
+  '@typescript-eslint/ban-ts-comment': 'error',
+  'no-array-constructor': 'off',
+  '@typescript-eslint/no-array-constructor': 'error',
+  '@typescript-eslint/no-duplicate-enum-values': 'error',
+  '@typescript-eslint/no-extra-non-null-assertion': 'error',
+  'no-loss-of-precision': 'off',
+  '@typescript-eslint/no-misused-new': 'error',
+  '@typescript-eslint/no-namespace': 'error',
+  '@typescript-eslint/no-this-alias': 'error',
+  '@typescript-eslint/no-unnecessary-type-constraint': 'error',
+  '@typescript-eslint/no-unsafe-declaration-merging': 'error',
+  'no-unused-vars': 'off',
+  '@typescript-eslint/no-unused-vars': 'error',
+  '@typescript-eslint/no-var-requires': 'error',
+  '@typescript-eslint/prefer-as-const': 'error',
+  '@typescript-eslint/triple-slash-reference': 'error',
   '@typescript-eslint/indent': ['error', 2],
   '@typescript-eslint/no-magic-numbers': 'off',
   '@typescript-eslint/strict-boolean-expressions': 'off',
