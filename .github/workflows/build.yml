@@ -6,7 +6,7 @@ name: PullRequest
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   pull_request:
-    branches: [ master, develop ]
+    branches: [master, develop]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,10 +23,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 14
-          cache: 'yarn'
-          registry-url: 'https://registry.npmjs.org'
-          cache-dependency-path: 'yarn.lock'
+          node-version: 16
+          cache: "yarn"
+          registry-url: "https://registry.npmjs.org"
+          cache-dependency-path: "yarn.lock"
       - name: Install node_modules
         run: yarn install
       - name: Build packages
