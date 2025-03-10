@@ -16,6 +16,7 @@ module.exports = (options) => {
 
   return {
     cache: helper.env.isDevMode ? devOptions.cache : prodOptions.cache,
+    snapshot: helper.env.isDevMode ? devOptions.snapshot : prodOptions.snapshot,
     mode: helper.env.getMode,
     context: helper.paths.SRC_DIR,
     stats: {
