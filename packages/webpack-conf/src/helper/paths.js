@@ -22,20 +22,12 @@ function resolveExistPath(...args) {
   return null;
 }
 
-let babelrc;
-try {
-  babelrc = require(fs.realpathSync(pathResolve('babel.config.js')));
-} catch (e) {
-  console.warn('babel.config.js not found');
-  babelrc = null;
-}
 
 module.exports = {
   ROOT_DIR,
   SRC_DIR: pathResolve('src'),
   BUILD_DIR: pathResolve('dist'),
   PUBLIC_DIR: pathResolve('public'),
-  babelrc,
   pathResolve,
   resolveExistPath,
 };

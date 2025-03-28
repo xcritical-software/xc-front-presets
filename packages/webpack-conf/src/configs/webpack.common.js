@@ -65,17 +65,6 @@ module.exports = (options) => {
               ],
             },
             {
-              test: /\.(js|jsx)$/,
-              exclude: [/node_modules/],
-              use: {
-                loader: 'babel-loader',
-                options: helper.loaders.getBabelOptions({
-                  babel: options.babel || {},
-                  isDevMode: helper.env.isDevMode,
-                }),
-              },
-            },
-            {
               test: /\.(css)$/,
               use: helper.loaders.generateStyleLoaders({ importLoaders: 1 }),
             },
