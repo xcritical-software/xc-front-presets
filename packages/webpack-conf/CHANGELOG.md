@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.7.0](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.6.2...@xcritical/webpack-conf@4.7.0) (2025-03-10)
+
+
+### Features
+
+* Add webpack snapshot configuration for dev and prod modes ([b26db2a](https://github.com/xcritical-software/xc-front-presets/commit/b26db2a17ce5d9afe8d160c70f740a2cb7939361))
+
+
+
+
+
 ## [4.6.2](https://github.com/xcritical-software/xc-front-presets/compare/@xcritical/webpack-conf@4.6.0...@xcritical/webpack-conf@4.6.2) (2023-10-24)
 
 
